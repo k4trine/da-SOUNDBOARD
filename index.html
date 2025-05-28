@@ -21,6 +21,19 @@
       border-radius: 15px;
       cursor: pointer;
     }
+  
+    #flyer {
+      position: absolute;
+      top: 50%;
+      left: -100px;
+      font-size: 50px;
+      opacity: 0;
+      transition: transform 2s linear, opacity 0.5s;
+    }
+
+    .fly {
+      transform: translateX(120vw);
+      opacity: 1;
   </style>
 
 <body bgcolor=pink>
@@ -121,11 +134,31 @@ Welcome 2 da SOUNDBOARD muahahaha. its getting Lit
 
 </div>
 
+<div id="flyer">
+  <img src="IMAGES/troll.jpg" id="flyimg" />
+</div>
+
  <script>
     function playSound(id) {
       const sound = document.getElementById(id);
       sound.currentTime = 0;
       sound.play().catch(err => console.error('Audio play error:', err));
+    }
+    function playOmg() {
+      const sound = document.getElementById("omg");
+      const flyer = document.getElementById("flyer");
+      sound.currentTime = 0;
+      sound.play();
+      flyer.classList.remove("fly");
+      flyer.style.opacity = 0;
+      flyer.style.left = "-100px";
+      void flyer.offsetWidth;
+      flyer.classList.add("fly");
+      flyer.style.opacity = 1;
+      setTimeout(() => {
+        flyer.classList.remove("fly");
+        flyer.style.opacity = 0;
+      }, 2200);
     }
   </script>
 
