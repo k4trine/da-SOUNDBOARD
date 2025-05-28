@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Soundboard Test</title>
+</head>
+<body>
+  <h1>Soundboard Test</h1>
+  <button onclick="document.getElementById('wow').play()">Play Wow</button>
+  <audio id="wow" src="AUDIO/Wow.mp3" preload="auto"></audio>
+</body>
+</html>

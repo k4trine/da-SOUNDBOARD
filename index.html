@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body {
+      text-align: center;
+      padding: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      background-color: #eb349b;
+      color: white;
+      box-shadow: 0 4px #c72681;
+      cursor: pointer;
+    }
+  </style>
+<body bgcolor=pink>
+  <h1>da SOUNDBOARD</h1>
+  <p>Welcome 2 da SOUNDBOARD muahahaha. its getting Lit</p>
+
+<div class="row">
+
+<button onclick="playSound('wow')">Wow!</button>
+<audio id="wow" src="AUDIO/Wow.mp3" preload="auto"></audio>
+
+<button onclick="playSound('what')">What!</button>
+<audio id="what" src="AUDIO/What.mp3" preload="auto"></audio>
+
+<button onclick="playSound('bruh')">Bruh</button>
+<audio id="bruh" src="AUDIO/Bruh.mp3" preload="auto"></audio>
+
+<button onclick="playSound('rizz')">Rizz</button>
+<audio id="rizz" src="AUDIO/Rizz.mp3" preload="auto"></audio>
+
+</div>
+
+<div class="row">
+
+<button onclick="playSound('triple')">Triple</button>
+<audio id="triple" src="AUDIO/Triple!.mp3" preload="auto"></audio>
+
+<button onclick="playSound('cheering')">Cheering</button>
+<audio id="cheering" src="AUDIO/Cheering.mp3" preload="auto"></audio>
+
+<button onclick="playSound('raah')">Raah</button>
+<audio id="raah" src="AUDIO/RAAH.mp3" preload="auto"></audio>
+
+<button onclick="playSound('fart')">Fart</button>
+<audio id="fart" src="AUDIO/Fart.mp3" preload="auto"></audio>
+
+</div>
+
+<div class="row">
+
+<button onclick="playSound('vine')">Vine</button>
+<audio id="vine" src="AUDIO/Vine.mp3" preload="auto"></audio>
+
+<button onclick="playSound('aww')">Aww !</button>
+<audio id="aww" src="AUDIO/Aww.mp3" preload="auto"></audio>
+
+<button onclick="playSound('clap')">Clapping</button>
+<audio id="clap" src="AUDIO/Clapping.mp3" preload="auto"></audio>
+
+<button onclick="playSound('metro')">Metro</button>
+<audio id="metro" src="AUDIO/Metro.mp3" preload="auto"></audio>
+
+</div>
+
+<div class="row">
+
+<button onclick="playSound('OHH')">OHHH</button>
+<audio id="OHH" src="AUDIO/OHH.mp3" preload="auto"></audio>
+
+<button onclick="playSound('violin')">Violin</button>
+<audio id="violin" src="AUDIO/Violin.mp3" preload="auto"></audio>
+
+<button onclick="playSound('boowomp')">Boo-womp.</button>
+<audio id="boowomp" src="AUDIO/Boo-womp.mp3" preload="auto"></audio>
+
+<button onclick="playSound('romantic')">Romantic</button>
+<audio id="romantic" src="AUDIO/Romantic.mp3" preload="auto"></audio>
+
+</div>
+
+<div class="row">
+
+<button onclick="playSound('mmm')">Mmm!</button>
+<audio id="mmm" src="AUDIO/MMM.mp3" preload="auto"></audio>
+
+</div>
+
+ <script>
+    function playSound(id) {
+      const sound = document.getElementById(id);
+      sound.currentTime = 0;
+      sound.play().catch(err => console.error('Audio play error:', err));
+    }
+  </script>
+
+</body>
+</html>
